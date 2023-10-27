@@ -14,3 +14,7 @@ function work(){
 console.log(y); // referrence error
 let y;
 y= 'aaa';
+
+
+
+//variables declared with var is hoisted but its intialise the undefined as a default value
