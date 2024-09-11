@@ -1,4 +1,4 @@
-//whenever the objects,arrays,function are created in javascript theres a inbuilt property attached to it that is called prototype
+//whenever the objects,arrays,function are created in javascript there is a inbuilt property attached to it that is called prototype
 
 console.log('from the prototype and prototypal inheritance');
 let arr = ['apple','mango'];

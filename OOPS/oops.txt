@@ -1,0 +1,119 @@
+OOPS in Javascript : JavaScript is prototype-based procedural language, which means it supports both functional and object-oriented programming.
+
+
+CLASS : Its a blueprint of objects ,We can create classes using the class keyword which is reserved keyword in JavaScript. Classes can have their own properties and methods. 
+
+OBJECTS : An object is an instance of a class ,  the actual thing we create from the class .
+
+one class can have many number of object
+
+There are 4 main principles in OOP, and they are:
+
+Abstraction  : Abstraction means hiding certain details that don't matter to the user and only showing essential features or functions
+Encapsulation : Encapsulation means keeping properties and methods private inside a class, so that they are not accessible from outside that class.
+Inheritance : Inheritance makes all properties and methods available to a child class. This allows us to reuse common logic and to model real-world relationships. 
+Polymorphism : Polymorphism means having different and many forms. We can overwrite a method inherited from a parent class.
+
+
+
+___________________________________________________________________
+OOPS IN JavaScript:  We have an object linked to a prototype. Prototypes contain all methods and these 
+methods are accessible to all objects linked to this prototype. This is called Prototypal Inheritance
+ (or Prototypal Delegation).
+______________________________________________________________________
+
+
+
+In JavaScript, we can achieve Object-Oriented Programming (OOP) principles through various techniques like constructor functions, prototypes, ES6 classes, and modules. Here's a breakdown of how you can implement OOP concepts in JavaScript:
+
+Constructor Functions: we can create constructor functions to initialize objects with properties and methods. These functions can be used with the new keyword to create instances.
+javascript
+
+function Person(name, age) {
+    this.name = name;
+    this.age = age;
+    
+    this.greet = function() {
+        console.log(`Hello, my name is ${this.name} and I'm ${this.age} years old.`);
+    };
+}
+
+const john = new Person('John', 30);
+john.greet(); // Outputs: Hello, my name is John and I'm 30 years old.
+Prototypes: we can use prototypes to share methods across multiple instances, improving memory efficiency.
+javascript
+
+function Person(name, age) {
+    this.name = name;
+    this.age = age;
+}
+
+Person.prototype.greet = function() {
+    console.log(`Hello, my name is ${this.name} and I'm ${this.age} years old.`);
+};
+
+const john = new Person('John', 30);
+john.greet(); // Outputs: Hello, my name is John and I'm 30 years old.
+ES6 Classes: ES6 introduced a class syntax that provides a more familiar way to define classes and inheritance.
+
+class Person {
+    constructor(name, age) {
+        this.name = name;
+        this.age = age;
+    }
+
+    greet() {
+        console.log(`Hello, my name is ${this.name} and I'm ${this.age} years old.`);
+    }
+}
+
+const john = new Person('John', 30);
+john.greet(); // Outputs: Hello, my name is John and I'm 30 years old.
+Inheritance: we can achieve inheritance by using prototypes or extending classes.
+
+class Animal {
+    constructor(name) {
+        this.name = name;
+    }
+
+    speak() {
+        console.log(`${this.name} makes a sound.`);
+    }
+}
+
+class Dog extends Animal {
+    constructor(name, breed) {
+        super(name);
+        this.breed = breed;
+    }
+
+    speak() {
+        console.log(`${this.name} barks.`);
+    }
+}
+
+const dog = new Dog('Buddy', 'Labrador');
+dog.speak(); // Outputs: Buddy barks.
+Modules: we can use modules to organize and encapsulate code into reusable components.
+
+// person.js
+export class Person {
+    constructor(name, age) {
+        this.name = name;
+        this.age = age;
+    }
+
+    greet() {
+        console.log(`Hello, my name is ${this.name} and I'm ${this.age} years old.`);
+    }
+}
+
+// main.js
+import { Person } from './person.js';
+
+const john = new Person('John', 30);
+john.greet(); // Outputs: Hello, my name is John and I'm 30 years old.
+
+
+
+
