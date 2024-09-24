@@ -19,3 +19,15 @@ function test(){
 
 console.log(tt)
 test()
+
+
+(function (x){
+    return (function (y){
+    console.log(x)})(2)
+    }(1))
+    
+    for (var i =0 ; i <3;i ++){
+        setTimeout(() => {
+          console.log(i)  
+        }, 1);
+    }

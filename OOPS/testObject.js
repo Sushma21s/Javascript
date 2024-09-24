@@ -17,3 +17,17 @@ user = { ...user, phoneNo: '9999999999' }; // method 3
 
 console.log(user,"user after adding")
 
+//deleting the property from object 
+
+var person = {
+    firstName: "John",
+    lastName: "Doe",
+    age: 30,
+    eyeColor: "blue"
+  };
+  console.log("before delete",person)
+  
+  delete person.age;
+
+  console.log("after delete",person)
+
