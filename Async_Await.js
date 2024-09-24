@@ -17,11 +17,11 @@ a(b);
 //async function
 
 async function hero() {
-  return "Jashvik";
+  return "John";
 }
 
 const heroName = hero();
-console.log(heroName); // function with out async gives result as jashvik and with async will return promise
+console.log(heroName); // function with out async gives result as john and with async will return promise
 
 heroName.then((res) => console.log(res)); //handling promises without await
 
